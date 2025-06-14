@@ -18,7 +18,7 @@ function setApiKey() {
     const inputApiKey = document.getElementByID('apiKeyInput').value.trim();
 
     if (!inputApiKey) {
-        alert('please enteran API Key!');
+        alert('please enter an API Key!');
         return;
     }
 
