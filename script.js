@@ -25,7 +25,8 @@ function setApiKey() {
     //Validate API key first
     fetch(rootPath + "controller/api-key/?apiKey=" + inputApiKey)
         .then(function (response){
-            return response.text()
+            return response.text();
+        })
         .then(function(data) {
             if (data == "1") {
                 apiKey = inputApiKey;
@@ -36,10 +37,8 @@ function setApiKey() {
                 alert("Invalid API key enetered");
             }
         })
-        })
-
         .catch(function() {
-            alert('Error validation your API Key.Please try again.')
+            alert('Error validation your API Key.Please try again.');
         });
 }
 
@@ -84,7 +83,7 @@ function displayContacts(contacts){
     const contactsList = document.getElementById('contactsList');
 
     if (!contacts || contacts.length === 0) {
-        contactsList.innerHTML = '<div class="Loading">No copntacts found. Add your first contact!</div>';
+        contactsList.innerHTML = '<div class="Loading">No contacts found. Add your first contact!</div>';
         return;
     }
 
