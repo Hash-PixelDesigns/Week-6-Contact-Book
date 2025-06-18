@@ -96,7 +96,7 @@ function displayContacts(contacts){
         const contact = contacts[i];
 
         let avatarSrc = contact.avatar ?
-            `${rootPath}controller/uploads/${contact.avatar}`;
+            `${rootPath}controller/uploads/${contact.avatar}`:
             `https://ui-avatars.com/api/?name=${contact.firstname}+${contact.lastname}&background=ff6b&color=fff&size=120`;
 
         html+= `
