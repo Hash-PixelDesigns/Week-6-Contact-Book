@@ -47,7 +47,7 @@ function setApiKey() {
 // Show different Pages
 function showPage(pageId) {
     const pages= document.querySelectorAll('.page');
-    forEach (page => page.classList.remove('active'));
+    pages.forEach (page => page.classList.remove('active'));
 }
 
 function showContacts() {
