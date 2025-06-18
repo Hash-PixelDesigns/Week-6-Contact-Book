@@ -17,7 +17,7 @@ function checkApiKey(){
 
 //Setup the API Key and Store it
 function setApiKey() {
-    const inputApiKey = document.getElementByID('apiKeyInput').value.trim();
+    const inputApiKey = document.getElementById('apiKeyInput').value.trim();
 
     if (!inputApiKey) {
         alert('please enter an API Key!');
