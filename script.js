@@ -32,7 +32,7 @@ function setApiKey() {
         .then(function(data) {
             if (data == "1") {
                 apiKey = inputApiKey;
-                localStorage.setItem("apiKey",apiKey);
+                localStorage.setItem("apiKey", apiKey);
                 showContacts();
                 getContacts();
             } else {
