@@ -78,7 +78,7 @@ function getContacts() {
             displayContacts(data);
         })
         .catch(function(error){
-            contactsList.innerHTML='<div class="error">Something wenr wrong, please try again later.</div>
+            contactsList.innerHTML='<div class="error">Something wenr wrong, please try again later.</div>';
         });
     }
 
