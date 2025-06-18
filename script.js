@@ -7,7 +7,9 @@ function checkApiKey(){
     const storedApiKey = localStorage.getItem('apiKey');
     if (storedApiKey) {
         apiKey = storedApiKey;
+        // Show contacts page(Show page)
         showContacts();
+        //Get contacts (API Call)
         getContacts()
 
     }
@@ -37,7 +39,7 @@ function setApiKey() {
                 alert("Invalid API key enetered");
             }
         })
-        .catch(function() {
+        .catch(function(error) {
             alert('Error validation your API Key.Please try again.');
         });
 }
@@ -54,12 +56,13 @@ function showContacts() {
 
 function showAddContacts() {
     showPage('addContactPage');
+    // Clear the Form 
     document.getElementById('addContactForm').reset();
 }
 
 function showEditContact (contactId) {
     showPage ('editContactPage')
-    
+    //Load contact data for editing
     loadContactForEdit(contactId);
 }
 
