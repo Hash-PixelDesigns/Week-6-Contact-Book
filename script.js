@@ -131,7 +131,7 @@ function addContact(event){
 
     fetch(rootPath + 'controller/insert-contact/',{
         method: 'POST',
-        headers:{'Accept':'application/json,*.* '};
+        headers:{'Accept':'application/json,*.* '},
         body:form
     })
         .then(function(response){
