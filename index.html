@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <div class = "container">
+    <div class="container">
         <div class="header">
             <h1>Contact Book</h1>
             <p>Manage your contacts with our simple API powered App</p>
@@ -18,7 +18,7 @@
             <div id="setupPage" class="page active">
                 <div class="api-setup">
                     <h3>API Setup Required</h3>
-                    <p> Before you use the contact book, please enter
+                    <p>Before you use the contact book, please enter
                     your api key below. If you don't have one you can use:
                         <strong>appacademy@itvarsity.org</strong></p>
                 </div>
@@ -28,11 +28,10 @@
                 </div>
 
                 <button class="btn" onclick="setApiKey()">Start Using Contact Book</button>
-                
             </div>
 
             <!--Main Contacts Page-->
-            <div id="contactPage" class="page">
+            <div id="contactsPage" class="page">
                 <div style="display:flex;justify-content: space-between;
                 align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap:10px">
                 
@@ -43,7 +42,7 @@
                     </div>
                 </div>
 
-                <div id="contactsList">
+                <div id="contactList">
                     <div class="loading">Loading contacts...</div>
                 </div>
             </div>
@@ -59,20 +58,20 @@
                         <label for="firstName">First Name:</label>
                         <input type="text" id="firstName" name="firstName" required>
                     </div>
-                      <div class="form-group">
+                    <div class="form-group">
                         <label for="lastName">Last Name:</label>
                         <input type="text" id="lastName" name="lastName" required>
                     </div>
-                      <div class="form-group">
+                    <div class="form-group">
                         <label for="mobile">Mobile Number:</label>
                         <input type="tel" id="mobile" name="mobile" required>
                     </div>
-                      <div class="form-group">
-                        <label for="email">Email ADdress:</label>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-                      <div class="form-group">
-                        <label for="avatar">Profile Picture(Optional):</label>
+                    <div class="form-group">
+                        <label for="avatar">Profile Picture (Optional):</label>
                         <input type="file" id="avatar" name="avatar" accept="image/*">
                     </div>
 
@@ -87,35 +86,41 @@
                 
                 <h2>Edit Contact</h2>
 
+                <!-- Add container for current avatar display -->
+                <div id="editAvatarImage" class="current-avatar"></div>
+
                 <form id="editContactForm" onsubmit="updateContact(event)">
+                    <!-- Hidden input to store contact ID -->
+                    <input type="hidden" id="editContactId" name="id">
+                    
                     <div class="form-group">
                         <label for="editFirstName">First Name:</label>
                         <input type="text" id="editFirstName" name="firstName" required>
                     </div>
-                      <div class="form-group">
-                        <label for="editlastName">Last Name:</label>
+                    <div class="form-group">
+                        <label for="editLastName">Last Name:</label>
                         <input type="text" id="editLastName" name="lastName" required>
                     </div>
-                      <div class="form-group">
+                    <div class="form-group">
                         <label for="editMobile">Mobile Number:</label>
                         <input type="tel" id="editMobile" name="mobile" required>
                     </div>
-                      <div class="form-group">
-                        <label for="editEmail">Email ADdress:</label>
+                    <div class="form-group">
+                        <label for="editEmail">Email Address:</label>
                         <input type="email" id="editEmail" name="email" required>
                     </div>
-                      <div class="form-group">
-                        <label for="editAvatar">Profile Picture(Optional):</label>
+                    <div class="form-group">
+                        <label for="editAvatar">Profile Picture (Optional):</label>
                         <input type="file" id="editAvatar" name="avatar" accept="image/*">
+                        <small>Leave empty to keep current picture</small>
                     </div>
 
-                    <button type="submit" class="btn btn-success">Save Contact</button>
+                    <button type="submit" class="btn btn-success">Update Contact</button>
                     <button type="button" class="btn btn-secondary" onclick="showContacts()">Cancel</button>
                 </form>
             </div>
         </div>
     </div>
-
 
     <script src="script.js"></script>
 </body>
