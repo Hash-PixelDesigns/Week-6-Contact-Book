@@ -10,7 +10,7 @@ function checkApiKey(){
         // Show contacts page(Show page)
         showContacts();
         //Get contacts (API Call)
-        getContacts()
+        getContacts();
 
     }
 }
@@ -51,7 +51,7 @@ function showPage(pageId) {
 }
 
 function showContacts() {
-    showPage('contactsPage');
+    showPage('contactPage');
 }
 
 function showAddContacts() {
@@ -86,7 +86,7 @@ function displayContacts(contacts){
     const contactsList = document.getElementById('contactsList');
 
     if (!contacts || contacts.length === 0) {
-        contactsList.innerHTML = '<div class="Loading">No contacts found. Add your first contact!</div>';
+        contactsList.innerHTML = 'div class="loading">No copntacts found.Add your first contact!</div>'
         return;
     }
 
@@ -228,9 +228,9 @@ function deleteContact(contactId) {
     }
 }
 
-window.onload = function () {
+window.onload = function() {
     checkApiKey();
-}
+};
 
 
 
